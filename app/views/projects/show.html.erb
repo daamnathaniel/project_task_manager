@@ -1,0 +1,18 @@
+<h1><%= @project.name %></h1>
+<p><%= @project.description %></p>
+
+<h3>Pending Tasks</h3>
+<ul>
+    <% @project.tasks_by_status("Pending").each do |task| %>
+        <li><%= link_to task.name, task_path(task) %></li>
+    <% end %>
+</ul>
+
+<h3>Completed Tasks</h3>
+<ul>
+    <% @project.tasks_by_status("Completed").each do |task| %>
+        <li><%= link_to task.name, task_path(task) %></li>
+    <% end %>
+</ul>
+
+<%= button_to "Edit Project", edit_project_path(@project), method: :get %>

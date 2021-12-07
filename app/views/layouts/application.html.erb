@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project/Task Managef</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_pack_tag 'stylesheets', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+<%= link_to "All Project", projects_path%>
+<%= link_to "All Tasks", tasks_path%>
+<%= yield %>
+</body>
+
+
+<footer>
+  Footer 
+  - <a id="add-content" href="" role="button">ADD CONTENT</a>
+  - <a id="remove-content" href="" role="button">REMOVE CONTENT</a>
+</footer>
+
+</html>
+
